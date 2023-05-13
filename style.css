@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+/*font-family: 'Viga', sans-serif;*/
+
+body {
+    background-color: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Viga', sans-serif;
+    text-transform: uppercase;
+    list-style: none;
+    align-items: center;
+    color: #ffffff;
+}
+
+.navBar {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    top: 50px;
+    left: 50px;
+    width: 145px;
+    white-space: nowrap;
+    font-size: 20px;
+}
+
+.follow {
+    cursor: pointer;
+}
+
+.follow-i-ul,
+.follow-i-ul li {
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.navBar:hover>.follow-i-ul {
+    pointer-events: auto;
+}
+
+.follow-i-ul img {
+    height: 30px;
+    margin: 0 auto;
+    filter: invert(100%);
+}
+
+.follow-i-ul img:hover {
+    filter: var(--filters);
+}
+
+.bar-hover1 {
+    background-color: rgb(255, 255, 255);
+    margin: 0 7px;
+    height: 5px;
+    width: 20px;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+}
+
+.bar-hover2 {
+    background-color: rgba(255, 255, 255, 0);
+    margin-right: 3px;
+    height: 5px;
+    width: 45px;
+    display: flex;
+    transition: all 0.5s ease-in-out;
+}
+
+.navBar:hover .follow-i-ul>li>.bar-hover1 {
+    width: 70px;
+    margin-right: 5px;
+}
+
+.navBar:hover .follow-i-ul>li>.bar-hover2 {
+    width: 0;
+    margin: 0;
+}
+
+.follow-i-li1,
+.follow-i-li2 {
+    opacity: 0;
+    margin-top: 5px;
+    margin-right: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.follow-i-li1 {
+    transform: translateY(40px);
+}
+
+.follow-i-li2 {
+    transform: translateY(-40px);
+}
+
+.navBar:hover>.follow-i-ul>.follow-i-li1 {
+    transform: translateY(0);
+    cursor: pointer;
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+}
+
+.navBar:hover>.follow-i-ul>.follow-i-li2 {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+}
